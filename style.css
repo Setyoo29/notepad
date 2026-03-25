@@ -1,0 +1,187 @@
+html, body{
+  height:100%;
+  margin:0;
+  overflow:hidden;
+  font-family:system-ui, sans-serif;
+  background:#0d1117;
+  color:#c9d1d9;
+}
+
+/* HEADER */
+.header{
+  height:56px;
+  border-bottom:1px solid #30363d;
+  display:flex;
+  align-items:center;
+  padding:0 16px;
+}
+
+/* LAYOUT */
+.container{
+  display:flex;
+  height:calc(100% - 56px);
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:260px;
+  border-right:1px solid #30363d;
+  overflow:auto;
+}
+
+.sidebar h3{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px;
+  margin:0;
+}
+
+.sidebar button{
+  background:#238636;
+  border:none;
+  color:white;
+  border-radius:4px;
+  cursor:pointer;
+  padding:2px 8px;
+}
+
+.sidebar button:hover{
+  background:#2ea043;
+}
+
+.file{
+  padding:8px 16px;
+  display:flex;
+  justify-content:space-between;
+  cursor:pointer;
+}
+
+.file:hover{
+  background:#161b22;
+}
+
+.file span:last-child{
+  opacity:0.6;
+}
+.file span:last-child:hover{
+  opacity:1;
+}
+
+/* MAIN */
+.main{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+/* PATH */
+.path{
+  padding:10px 16px;
+  border-bottom:1px solid #30363d;
+}
+
+/* TABS */
+.tabs{
+  display:flex;
+  padding:10px;
+  border-bottom:1px solid #30363d;
+}
+
+.tab{
+  margin-right:10px;
+  padding:5px 10px;
+  cursor:pointer;
+}
+
+.tab.active{
+  background:#21262d;
+}
+
+/* TOOLBAR */
+.toolbar{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  padding:10px 16px;
+  border-bottom:1px solid #30363d;
+  position:sticky;
+  top:0;
+  background:#0d1117;
+  z-index:10;
+}
+
+.btn{
+  border:1px solid #30363d;
+  padding:5px 10px;
+  cursor:pointer;
+  border-radius:6px;
+  background:#21262d;
+}
+
+.btn:hover{
+  background:#30363d;
+}
+
+/* PREVIEW */
+.viewer{
+  flex:1;
+  overflow:auto;
+  font-family:monospace;
+  font-size:13px;
+}
+
+.code-table{
+  width:100%;
+}
+
+/* LINE NUMBER TIDAK BISA DI SELECT */
+.line{
+  width:50px;
+  text-align:right;
+  padding-right:10px;
+
+  color:rgba(125, 133, 144, 0.6); /* ⬅️ transparan */
+  user-select:none;
+  pointer-events:none;
+}
+
+.code{
+  white-space:pre-wrap;   /* ⬅️ ini bikin wrap */
+  word-break:break-word;  /* ⬅️ biar panjang tetap pecah */
+  padding-right:20px;
+  line-height:1.5;
+}
+
+/* EDITOR */
+.editor{
+  display:flex;
+  flex:1;
+  overflow:hidden;
+}
+
+#lineNumbers{
+  padding:16px 8px;
+  text-align:right;
+  color:#7d8590;
+  border-right:1px solid #30363d;
+  overflow:hidden;
+}
+
+#editorInput{
+  flex:1;
+  background:#0d1117;
+  color:#c9d1d9;
+  border:none;
+  outline:none;
+  padding:16px;
+  font-family:monospace;
+  font-size:13px;
+  resize:none;
+  overflow:auto;
+  line-height:1.5;
+}
+
+.hidden{
+  display:none;
+}

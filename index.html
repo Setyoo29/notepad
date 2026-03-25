@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Notepad Setyo Editor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+  <div class="repo">Notepad BANG YOYO</div>
+</div>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>
+      Files
+      <button onclick="addFile()">+</button>
+    </h3>
+    <div id="fileList"></div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+
+    <div class="path">
+      / <span id="fileName">No file selected</span>
+    </div>
+
+    <!-- Toggle -->
+    <div class="tabs">
+      <div class="tab active" onclick="setMode('preview')" id="previewBtn">Preview</div>
+      <div class="tab" onclick="setMode('edit')" id="editBtn">Edit</div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <div class="btn" onclick="copyText()">Copy</div>
+      <div class="btn" onclick="downloadFile()">Download</div>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="viewer" id="preview">
+      <table class="code-table" id="codeTable"></table>
+    </div>
+
+    <!-- EDITOR -->
+    <div id="editorContainer" class="editor hidden">
+      <div id="lineNumbers"></div>
+      <textarea id="editorInput"></textarea>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
