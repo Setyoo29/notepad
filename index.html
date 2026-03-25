@@ -1,62 +1,274 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Notepad Setyo Editor</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Garuda Contact Center</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<div class="header">
-  <div class="repo">Notepad BANG YOYO</div>
-</div>
 
 <div class="container">
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <h3>
-      Files
-      <button onclick="addFile()">+</button>
-    </h3>
-    <div id="fileList"></div>
-  </div>
+    <!-- Title -->
+    <h3 class="text-center mt-4">Garuda Contact Center Application</h3>
 
-  <!-- Main -->
-  <div class="main">
-
-    <div class="path">
-      / <span id="fileName">No file selected</span>
+    <!-- Section Title dengan garis -->
+    <div class="section-title">
+        <span>Reservation & Content</span>
     </div>
 
-    <!-- Toggle -->
-    <div class="tabs">
-      <div class="tab active" onclick="setMode('preview')" id="previewBtn">Preview</div>
-      <div class="tab" onclick="setMode('edit')" id="editBtn">Edit</div>
+    <!-- Grid -->
+    <div class="row g-3">
+
+        <!-- ITEM -->
+        <div class="col-auto text-center">
+            <a href="https://www.accounts.amadeus.com/LoginService/authorizeAngular?service=ARD_GA&client_id=1ASIXARDGA&LANGUAGE=GB&redirect_uri=https%3A%2F%2Ftc34.resdesktop.altea.amadeus.com%2Fapp_ard%2Fapf%2Finit%2Flogin%3FSITE%3DAGAPAGAP%26LANGUAGE%3DGB%26MARKETS%3DARDW_ESSENTIAL%2CARDW_PROD_INTRA_APAC%26event%3DLOGIN_LOGOUT%26ACTION%3DclpLogin#" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Altea (Internet)">
+                    <img src="img/altea.jpg" alt="Altea (Internet)">
+                </div>
+                <p>Altea<br><small>(Internet)</small></p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="https://tc34.intranet.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=AGAPAGAP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Altea (Intranet)">
+                    <img src="img/altea.jpg" alt="Altea (Intranet)">
+                </div>
+                <p>Altea<br><small>(Intranet)</small></p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="https://amala.garuda-indonesia.com/member" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Amala">
+                    <img src="img/amala.jpg" alt="Amala">
+                </div>
+                <p>Amala</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://10.194.51.20/index.php?option=com_users&view=login&lang=en" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Gazone">
+                    <img src="img/gazone.jpg" alt="Gazone">
+                </div>
+                <p>Garudazone</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://www.garudazone.com/index.php?option=com_users&view=login&lang=en" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Gazone Domain">
+                    <img src="img/gazone.jpg" alt="Gazone Domain">
+                </div>
+                <p>Garudazone<br><small>Domain</small></p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="https://www.garuda-indonesia.com/id/id/index.page" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Garuda Indonesia">
+                    <img src="img/garudaind.jpg" alt="Garuda Indonesia">
+                </div>
+                <p>Garuda Indonesia</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://www.skyteam.com/" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="SkyTeam">
+                    <img src="img/skyteam.jpg" alt="SkyTeam">
+                </div>
+                <p>SkyTeam</p>
+            </a>
+        </div>
+
     </div>
 
-    <!-- Toolbar -->
-    <div class="toolbar">
-      <div class="btn" onclick="copyText()">Copy</div>
-      <div class="btn" onclick="downloadFile()">Download</div>
+    <!-- Section Title dengan garis -->
+    <div class="section-title">
+        <span>Online Payment</span>
     </div>
 
-    <!-- PREVIEW -->
-    <div class="viewer" id="preview">
-      <table class="code-table" id="codeTable"></table>
+    <!-- Grid -->
+    <div class="row g-3">
+
+        <!-- ITEM -->
+        <div class="col-auto text-center">
+            <a href="http://172.17.1.50/olp_register_new_v6_7/" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="OLP Register">
+                    <img src="img/olpreg.gif" alt="OLP Register">
+                </div>
+                <p>OLP Reg</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://172.17.1.50:81/paymentcheckv4/" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Payment Check">
+                    <img src="img/payment.png" alt="Payment Check">
+                </div>
+                <p>Payment Check</p>
+            </a>
+        </div>
+
     </div>
 
-    <!-- EDITOR -->
-    <div id="editorContainer" class="editor hidden">
-      <div id="lineNumbers"></div>
-      <textarea id="editorInput"></textarea>
+    <!-- Section Title dengan garis -->
+    <div class="section-title">
+        <span>Tools</span>
     </div>
 
-  </div>
+    <!-- Grid -->
+    <div class="row g-3">
+
+        <!-- ITEM -->
+        <div class="col-auto text-center">
+            <a href="https://garuda.onx.co.id/login" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Omnix">
+                    <img src="img/onx.jpg" alt="Omnix">
+                </div>
+                <p>Omnix Garuda</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://172.17.1.91/simeldav2" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Simelda">
+                    <img src="img/simelda.jpg" alt="Simelda">
+                </div>
+                <p>SIMELDA</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://172.17.1.91/reisa" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Reisa">
+                    <img src="img/reisa.jpg" alt="Reisa">
+                </div>
+                <p>Reisa</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://172.17.1.91/otpv3/" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="OTP">
+                    <img src="img/otp.jpg" alt="OTP">
+                </div>
+                <p>OTP</p>
+            </a>
+        </div>
+        
+        
+    </div>
+
+    <!-- Section Title dengan garis -->
+    <div class="section-title">
+        <span>GarudaMiles</span>
+    </div>
+
+    <!-- Grid -->
+    <div class="row g-3">
+
+        <div class="col-auto text-center">
+            <a href="http://bit.ly/MODULGAMILES" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Modul">
+                    <img src="img/otp.jpg" alt="Modul">
+                </div>
+                <p>MODUL</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://bit.ly/TemplateWAGMSRG" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Template">
+                    <img src="img/template.avif" alt="Template">
+                </div>
+                <p>Template</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://bit.ly/TemplateBotWAGMSRG" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Template Bot">
+                    <img src="img/templatebot.jpg" alt="Template Bot">
+                </div>
+                <p>Template Bot</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://bit.ly/BotWAGMSRG" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Bot GAMiles">
+                    <img src="img/bot.jpg" alt="Bot GAMiles">
+                </div>
+                <p>Bot GAMiles</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="https://setyoo29.github.io/notepad/" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Notepad">
+                    <img src="img/notepad.jpg" alt="Notepad">
+                </div>
+                <p>Notepad</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://bit.ly/GithubGAMiles" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Github">
+                    <img src="img/github.png" alt="Github">
+                </div>
+                <p>Github</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://bit.ly/MonitWAGMSRG" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Monit GAMiles">
+                    <img src="img/monit.jpg" alt="Monit GAMiles">
+                </div>
+                <p>Monit GAMiles</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://bit.ly/MonitSETYO" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Monit Setyo">
+                    <img src="img/monitsetyo.png" alt="Monit Setyo">
+                </div>
+                <p>Monit Setyo</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="https://garuda-wall.onx.co.id/app/index.php" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Monit Queue">
+                    <img src="img/monitqueue.png" alt="Monit Queue">
+                </div>
+                <p>Monit Queue</p>
+            </a>
+        </div>
+
+        <div class="col-auto text-center">
+            <a href="http://bit.ly/ROSTERGAMILES" target="_blank" class="menu-link">
+                <div class="thumbnail-box" title="Roster GAMiles">
+                    <img src="img/roster.jpg" alt="Roster GAMiles">
+                </div>
+                <p>Roster GAMiles</p>
+            </a>
+        </div>
+    
+    </div>
 
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>
